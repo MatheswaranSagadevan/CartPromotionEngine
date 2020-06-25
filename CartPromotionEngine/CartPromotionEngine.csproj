@@ -52,12 +52,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Implementations\Cart.cs" />
+    <Compile Include="Implementations\CartProduct.cs" />
+    <Compile Include="Implementations\PriceCalculator.cs" />
+    <Compile Include="Implementations\Product.cs" />
+    <Compile Include="Implementations\PromotionTypeEnum.cs" />
+    <Compile Include="interfaces\ICart.cs" />
+    <Compile Include="interfaces\ICartProduct.cs" />
+    <Compile Include="interfaces\IPriceCalculator.cs" />
+    <Compile Include="interfaces\IProduct.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Readme.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
