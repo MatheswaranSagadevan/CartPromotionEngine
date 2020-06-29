@@ -1,4 +1,5 @@
 ﻿using System;
+using CartPromotionEngine.Implementations;
 using CartPromotionEngine.interfaces;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NSubstitute;
@@ -12,9 +13,10 @@ namespace CartPromotionEngineTests
         public void WhenProductIsAThenReturnValue()
         {
             // Arrange
-            var product = Substitute.For<IProduct>();
+            //var product = Substitute.For<IProduct>();
+            var product = new Product();
             int value = 50;
-            product.GetItemCost('A').Returns(value);
+            //product.GetItemCost('A').Returns(value);
 
             // Act
             var result = product.GetItemCost('A');
@@ -27,9 +29,10 @@ namespace CartPromotionEngineTests
         public void WhenProductIsBThenReturnValue()
         {
             // Arrange
-            var product = Substitute.For<IProduct>();
+            //var product = Substitute.For<IProduct>();
             int value = 30;
-            product.GetItemCost('B').Returns(value);
+            var product = new Product();
+            //product.GetItemCost('B').Returns(value);
 
             // Act
             var result = product.GetItemCost('B');
@@ -42,9 +45,10 @@ namespace CartPromotionEngineTests
         public void WhenProductIsCThenReturnValue()
         {
             // Arrange
-            var product = Substitute.For<IProduct>();
+            //var product = Substitute.For<IProduct>();
+            var product = new Product();
             int value = 20;
-            product.GetItemCost('C').Returns(value);
+            //product.GetItemCost('C').Returns(value);
 
             // Act
             var result = product.GetItemCost('C');
@@ -57,9 +61,10 @@ namespace CartPromotionEngineTests
         public void WhenProductIsDThenReturnValue()
         {
             // Arrange
-            var product = Substitute.For<IProduct>();
+            //var product = Substitute.For<IProduct>();
+            var product = new Product();
             int value = 15;
-            product.GetItemCost('D').Returns(value);
+            //product.GetItemCost('D').Returns(value);
 
             // Act
             var result = product.GetItemCost('D');
@@ -72,9 +77,10 @@ namespace CartPromotionEngineTests
         public void WhenProductDoesNotExistThenReturnNegativeValue()
         {
             // Arrange
-            var product = Substitute.For<IProduct>();
+            //var product = Substitute.For<IProduct>();
+            var product = new Product();
             int value = -1;
-            product.GetItemCost('E').Returns(value);
+            //product.GetItemCost('E').Returns(value);
 
             // Act
             var result = product.GetItemCost('E');
